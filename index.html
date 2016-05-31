@@ -1,0 +1,122 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="css/spectre.min.css">
+  <link rel="stylesheet" href="css/gridlex.min.css">
+  <script src="js_lib/jquery.min.js"></script>
+
+
+    <script src="js_lib/react.js"></script>
+    <script src="js_lib/reactDom.js"></script>
+    <script src="js_lib/browser.min.js"></script>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+
+  <!--START  nav -->
+  <header class="navbar">
+      <section class="navbar-section">
+          <a href="#" class="btn btn-link btn-lg">
+              <i class="icon icon-people"></i>
+          </a>
+          <a href="#" class="navbar-brand">Tester</a>
+      </section>
+      <section class="navbar-section">
+
+          <a href="#" class="btn btn-link">not link</a>
+
+          <figure class="avatar avatar-xl">
+            <img src="img/avatar-2.png" />
+          </figure>
+          <a href="#" class="btn btn-link">signout</a>
+      </section>
+  </header>
+  <!--END  nav -->
+
+  <!--START  create post and list of posts -->
+<div class="grid-center">
+
+  <div class="col-8">
+
+  <!--START  Create post form -->
+    <div class="col-8" >
+      <form>
+
+          <!-- form select control -->
+          <div class="form-group">
+              <textarea class="form-input" id="input-example-3" placeholder="Textarea" rows="3"></textarea>
+          </div>
+          <!-- form checkbox control -->
+
+          <div class="form-group">
+            <button class="btn btn-primary" type="submit">Create</button>
+        </div>
+
+      </form>
+
+    </div>
+    <!-- END Create post form -->
+
+
+    <!--START List of posts -->
+    <div class="col-8">
+
+
+          <!--START  a_posts id="listOfPosts"  -->
+          <div class="card" id="listOfPosts">
+
+              <div class="card-header">
+                <!--START  place dp and name side b side -->
+                <div class="grid-center">
+
+                  <div class="col-1">
+                    <figure class="avatar avatar-md">
+                      <img src="img/avatar-2.png" />
+                    </figure>
+                  </div>
+
+                  <div class="col-2">
+                    <h4 class="card-title">Username</h4>
+                  </div>
+
+
+                </div>
+                <!--END  place dp and name side b side -->
+            </div> <!--end Card header -->
+
+              <div class="card-body" id="root">
+
+              </div>
+
+
+          </div>
+          <!--END  a_posts -->
+
+    </div>
+    <!-- END - List of posts  -->
+
+  </div>
+  <!-- END col-6 -->
+
+</div>
+<!-- END grid-center -->
+
+<!--END create post and list of posts -->
+<script type="text/jsx">
+ReactDOM.render(<h1>Hello World</h1>, document.getElementById('root'));
+</script>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
