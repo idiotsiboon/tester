@@ -127,45 +127,42 @@ var NewPost = React.createClass({
 /*END Post*/
 
 //JSON OF ALL POSTS
-var PostsJson = [
-  {
-    "_id": "57568c2b63cf6d8e04b254e3",
-    "content": "voluptate anim mollit dolor enim aliqua officia labore anim mollit",
-    "username": "Conway",
-    "createdAt": "2016-05-06T05:37:12 -06:-30"
-  },
-  {
-    "_id": "57568c2bf54503c6018545fe",
-    "content": "consequat ex occaecat et nisi enim dolor exercitation non eu",
-    "username": "Hood",
-    "createdAt": "2016-03-14T07:11:03 -06:-30"
-  },
-  {
-    "_id": "57568c2b72f6daf56efc6d48",
-    "content": "eu non consectetur excepteur nulla duis reprehenderit incididunt veniam deserunt",
-    "username": "Jo",
-    "createdAt": "2016-01-05T08:48:26 -06:-30"
-  },
-  {
-    "_id": "57568c2b0f3591acf7508c1a",
-    "content": "velit nostrud aliquip cupidatat est nisi exercitation cillum laborum ex",
-    "username": "Jeanie",
-    "createdAt": "2016-03-01T06:42:10 -06:-30"
-  },
-  {
-    "_id": "57568c2b57d38b3cb87c746f",
-    "content": "labore cillum nisi exercitation enim ipsum veniam excepteur sunt aliquip",
-    "username": "Nina",
-    "createdAt": "2016-04-10T03:41:29 -06:-30"
-  },
-  {
-    "_id": "57568c2b8b3af3cd1eaa40ce",
-    "content": "id consequat occaecat nulla cillum aute esse amet occaecat ut",
-    "username": "Nieves",
-    "createdAt": "2016-03-17T01:22:54 -06:-30"
-  }
-];
-
+var PostsJson = [{
+  "_id": "d6d7a567-3092-4aed-b8ba-fe54967e1b43",
+  "content": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
+  "username": "Nancy Clark",
+  "createdAt": "7/22/2015"
+}, {
+  "_id": "5ab43e63-090c-4c81-ae65-f33d85ca8420",
+  "content": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
+  "username": "Martha Foster",
+  "createdAt": "10/1/2015"
+}, {
+  "_id": "9734b804-3f15-40ff-94e4-4c9cb68f2f07",
+  "content": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
+  "username": "Howard Fields",
+  "createdAt": "2/7/2016"
+}, {
+  "_id": "8cf715c1-c79d-4e42-89eb-d5910fad27ba",
+  "content": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
+  "username": "Brian Daniels",
+  "createdAt": "1/26/2016"
+}, {
+  "_id": "758af271-7edb-4c14-bb6e-bcc282de9922",
+  "content": "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
+  "username": "Diane Stewart",
+  "createdAt": "12/22/2015"
+}, {
+  "_id": "16ba444a-27d4-4fb7-b91a-46228447b23b",
+  "content": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+  "username": "Lawrence Howard",
+  "createdAt": "7/27/2015"
+}, {
+  "_id": "1cbd224e-1bfc-4de9-8b82-9124281230c3",
+  "content": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.",
+  "username": "Judy Morales",
+  "createdAt": "8/3/2015"
+}];
 var Forum = React.createClass({
   getInitialState: function() {
     return {
