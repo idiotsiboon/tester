@@ -1,4 +1,4 @@
-var App = React.createClass({
+window.App = React.createClass({
 
   getInitialState: function () {
 

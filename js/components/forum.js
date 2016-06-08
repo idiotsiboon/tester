@@ -163,7 +163,7 @@ var PostsJson = [{
   "username": "Judy Morales",
   "createdAt": "8/3/2015"
 }];
-var Forum = React.createClass({
+window.Forum = React.createClass({
   getInitialState: function () {
     return {
       posts: this.props.posts,

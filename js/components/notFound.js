@@ -1,5 +1,5 @@
 
-var NotFound = React.createClass({
+window.NotFound = React.createClass({
 
   getInitialState: function () {
 
@@ -14,4 +14,3 @@ var NotFound = React.createClass({
   }
 
 });
-
