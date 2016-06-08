@@ -40,19 +40,19 @@ renderLinks:function () {
 
 render(){
   return(
-    <span>
-    {this.renderBrand()}
-    <section className="navbar-section">
-    {this.renderLinks()}
-    {this.renderAvatar()}
-    {this.renderSignout()}
-    </section>
-    </span>
+    <header className="navbar" id="NavId">
+      {this.renderBrand()}
+      <section className="navbar-section">
+        {this.renderLinks()}
+        {this.renderAvatar()}
+        {this.renderSignout()}
+      </section>
+    </header>
   );
 }
 
 });
 
 ReactDOM.render(
-  <Nav />, document.getElementById('NavId')
+  <Nav />, document.getElementById('nav-container')
 );
