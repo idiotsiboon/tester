@@ -3,19 +3,19 @@ var NotFound = React.createClass({
 
   getInitialState: function () {
 
-  return{
-      route:'NotFound',
+    return {
+      route: "NotFound"
     };
 
   },
 
-  render(){
-    return(<div>Not Found</div>);
-  },
+  render() {
+    return (<div>Not Found</div>);
+  }
 
 });
 
 
 ReactDOM.render(
-  <App/>, document.getElementById('PostsId')
+  <App />, document.getElementById("PostsId")
 );

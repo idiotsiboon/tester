@@ -2,38 +2,38 @@ var App = React.createClass({
 
   getInitialState: function () {
 
-  return{
-      route:'NotFound',
+    return {
+      route: "NotFound"
     };
 
   },
 
-  setRoute(r){
-    this.setState({route:r});
+  setRoute(r) {
+    this.setState({ route: r });
   },
 
-  render(){
+  render() {
     const route = this.state.route;
 
     switch (route) {
 
-      case 'login':
-        return(<Login/>);
+      case "login":
+        return (<Login />);
         break;
 
-      case 'forum':
-          return(<Forum/>);
-          break;
+      case "forum":
+        return (<Forum />);
+        break;
 
 
       default:
-        return(<NotFound/>);
+        return (<NotFound />);
 
 
     }
 
 
-},
+  }
 
 
 });

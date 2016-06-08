@@ -1,8 +1,8 @@
-/*START Post*/
+/* START Post*/
 var Post = React.createClass({
 
-  render:function(){
-    return(
+  render: function () {
+    return (
       <span>
       <div className="card-header">
 
@@ -33,63 +33,63 @@ var Post = React.createClass({
   }
 
 });
-/*END Post*/
+/* END Post*/
 
-/*START PostS*/
+/* START PostS*/
 var Posts = React.createClass({
 
-render:function () {
- var PostsArr = [];
+  render: function () {
+    var PostsArr = [];
 
-this.props.posts.forEach(function(post) {
-PostsArr.push(<Post content={post.content} key={post._id} username={post.username}/>);
-});
+    this.props.posts.forEach(function (post) {
+      PostsArr.push(<Post content={post.content} key={post._id} username={post.username} />);
+    });
 
-return(
+    return (
   <div className="card">
   {PostsArr}
   </div>
 );
 
-}
+  }
 
 });
 
-/*START NewPost*/
+/* START NewPost*/
 
 var NewPost = React.createClass({
-//SET INITIAL STATE
-  getInitialState : function() {
+// SET INITIAL STATE
+  getInitialState: function () {
     return {
-      content : "write here"
-    }
+      content: "write here"
+    };
   },
-//WHEN value OF Textarea CHANGES
-  handleChange: function(e) {
-   this.setState({content:e.target.value});
- },
+// WHEN value OF Textarea CHANGES
+  handleChange: function (e) {
+    this.setState({ content: e.target.value });
+  },
 
-//FORM submit
-  insertPostsJson:function (e) {
+// FORM submit
+  insertPostsJson: function (e) {
     e.preventDefault();
 
-    //JSON OF Post
-  var doc={
+    // JSON OF Post
+    var doc = {
       "_id": Math.random(),
       "content": this.state.content,
       "username": "Maggie"
     };
 
-  console.log(doc);
-  //push(doc) into posts;
+    console.log(doc);
+  // push(doc) into posts;
 
-  this.setState({content:""});
+    this.setState({ content: "" });
   },
 
-  render:function () {
+  render: function () {
 
-    return(
-      <form  onSubmit={this.insertPostsJson}>
+    return (
+      <form onSubmit={this.insertPostsJson}>
 
           <div className="form-group">
               <textarea className="form-input" value={this.state.content} onChange={this.handleChange} placeholder="Textarea" rows="3"></textarea>
@@ -103,12 +103,12 @@ var NewPost = React.createClass({
     );
   }
 });
-/*END NewPost*/
+/* END NewPost*/
 
-/*END Post*/
+/* END Post*/
 
-//JSON OF ALL POSTS
-var PostsJson=[
+// JSON OF ALL POSTS
+var PostsJson = [
   {
     "_id": "574dc2f718a842f7acb93970",
     "content": "eiusmod deserunt cillum reprehenderit duis reprehenderit do aliquip ad ut",
@@ -143,9 +143,9 @@ var PostsJson=[
 
 
 ReactDOM.render(
-  <Posts posts={PostsJson}/>,document.getElementById('PostsId')
+  <Posts posts={PostsJson} />, document.getElementById("PostsId")
 );
 
 ReactDOM.render(
-  <NewPost/>,document.getElementById('NewPostId')
+  <NewPost />, document.getElementById("NewPostId")
 );

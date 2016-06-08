@@ -1,16 +1,16 @@
-var Nav= React.createClass({
+var Nav = React.createClass({
 
-handleSignout:function(){},
+  handleSignout: function () {},
 
-renderBrand: function(){
-  return(
+  renderBrand: function () {
+    return (
       <span>
         <a href="#" className="btn btn-link btn-lg">
             <i className="icon icon-people"></i></a>
         <a href="#" className="navbar-brand">Tester</a>
       </span>
   );
-},
+  },
 
 renderAvatar: function () {
   return(
@@ -20,24 +20,24 @@ renderAvatar: function () {
   );
 },
 
-renderSignout: function () {
-  return(
+  renderSignout: function () {
+    return (
      <a href="#" className="btn btn-link">signout</a>
   );
-},
+  },
 
-demof:function (e) {
-  console.log(e);
-},
+  demof: function (e) {
+    console.log(e);
+  },
 
-renderLinks:function () {
-  return(
+  renderLinks: function () {
+    return (
     <span>
     <a href="javascript:{this.demof}" className="btn btn-link">Login</a>
     <a href="#" className="btn btn-link">Home</a>
     </span>
   );
-},
+  },
 
 
 render(){
@@ -51,7 +51,7 @@ render(){
       </section>
     </header>
   );
-}
+  }
 
 });
 
