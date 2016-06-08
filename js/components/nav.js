@@ -54,7 +54,3 @@ render(){
   }
 
 });
-
-ReactDOM.render(
-  <Nav />, document.getElementById('nav-container')
-);
