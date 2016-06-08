@@ -188,3 +188,6 @@ var Forum = React.createClass({
   }
 
 });
+
+
+//ReactDOM.render(<Forum posts={PostsJson}/>, document.getElementById('PostsId'));

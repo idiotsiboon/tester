@@ -1,4 +1,4 @@
-var Nav = React.createClass({
+window.Nav = React.createClass({
 
   handleSignout: function () {},
 
