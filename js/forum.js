@@ -166,7 +166,8 @@ var PostsJson = [{
 var Forum = React.createClass({
   getInitialState: function() {
     return {
-      posts: this.props.posts
+      posts: this.props.posts,
+      route:'forum',
     }
   },
 
