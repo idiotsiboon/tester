@@ -12,11 +12,13 @@ var Nav = React.createClass({
   );
   },
 
-  renderAvatar: function () {
-    <figure className="avatar avatar-xl">
-          <img src="../img/avatar-2.png" />
-  </figure>;
-  },
+renderAvatar: function () {
+  return(
+  <figure className="avatar avatar-xl">
+    <img src="img/avatar-2.png" />
+  </figure>
+  );
+},
 
   renderSignout: function () {
     return (
@@ -38,21 +40,21 @@ var Nav = React.createClass({
   },
 
 
-  render() {
-    return (
-    <span>
-    {this.renderBrand()}
-    <section className="navbar-section">
-    {this.renderLinks()}
-    {this.renderAvatar()}
-    {this.renderSignout()}
-    </section>
-    </span>
+render(){
+  return(
+    <header className="navbar" id="NavId">
+      {this.renderBrand()}
+      <section className="navbar-section">
+        {this.renderLinks()}
+        {this.renderAvatar()}
+        {this.renderSignout()}
+      </section>
+    </header>
   );
   }
 
 });
 
 ReactDOM.render(
-  <Nav />, document.getElementById("NavId")
+  <Nav />, document.getElementById('nav-container')
 );
