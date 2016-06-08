@@ -13,9 +13,11 @@ renderBrand: function(){
 },
 
 renderAvatar: function () {
+  return(
   <figure className="avatar avatar-xl">
-          <img src="../img/avatar-2.png" />
+    <img src="img/avatar-2.png" />
   </figure>
+  );
 },
 
 renderSignout: function () {
