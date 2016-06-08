@@ -31,9 +31,6 @@ var App = React.createClass({
 
 
     }
-
-
   }
-
 
 });
