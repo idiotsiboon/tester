@@ -11,7 +11,7 @@ var Post = React.createClass({
     );
   },
 
-  renderUsername: function() {
+  renderUsername: function () {
 
     return (
       <div className="col-2">
@@ -20,7 +20,7 @@ var Post = React.createClass({
     );
   },
 
-  renderContent: function() {
+  renderContent: function () {
 
     return (
       <div className="card-body" data-id={this.props.id}>
@@ -29,7 +29,7 @@ var Post = React.createClass({
     );
   },
 
-  render: function() {
+  render: function () {
 
     return (
       <span>
@@ -45,26 +45,26 @@ var Post = React.createClass({
   }
 });
 
-/*START PostS*/
+/* START PostS*/
 var Posts = React.createClass({
 
 
-  render: function() {
+  render: function () {
 
 
-    var x= this.props.posts.sort(function(a,b){
-    var c = new Date(a.createdAt);
-    var d = new Date(b.createdAt);
-    return d-c;
+    var x = this.props.posts.sort(function (a, b) {
+      var c = new Date(a.createdAt);
+      var d = new Date(b.createdAt);
+      return d - c;
     });
 
-    const renderedPosts = x.map(function(post) {
+    const renderedPosts = x.map(function (post) {
       return (
-        <Post content={post.content} key={post._id} id={post._id} username={post.username}/>
+        <Post content={post.content} key={post._id} id={post._id} username={post.username} />
       );
     });
 
-    return  (
+    return (
       <div className="card">
         {renderedPosts}
       </div>
@@ -72,32 +72,32 @@ var Posts = React.createClass({
   }
 });
 
-/*START NewPost*/
+/* START NewPost*/
 
 var NewPost = React.createClass({
-//SET INITIAL STATE
-  getInitialState: function() {
+// SET INITIAL STATE
+  getInitialState: function () {
     return {
-      content : "write here"
-    }
+      content: "write here"
+    };
   },
-//WHEN value OF Textarea CHANGES
-  handleChange: function(e) {
+// WHEN value OF Textarea CHANGES
+  handleChange: function (e) {
     this.setState({
       content: e.target.value
     });
   },
 
-  //FORM submit
-  handleSubmit: function(e) {
+  // FORM submit
+  handleSubmit: function (e) {
     e.preventDefault();
 
-    //JSON OF Post
+    // JSON OF Post
     var post = {
       "_id": Math.random(),
       "content": this.state.content,
       "username": "Maggie",
-      "createdAt":new Date(),
+      "createdAt": new Date()
     };
     console.log(post);
 
@@ -108,7 +108,7 @@ var NewPost = React.createClass({
     });
   },
 
-  render: function() {
+  render: function () {
 
     return (
       <form onSubmit={this.handleSubmit}>
@@ -122,11 +122,11 @@ var NewPost = React.createClass({
     );
   }
 });
-/*END NewPost*/
+/* END NewPost*/
 
-/*END Post*/
+/* END Post*/
 
-//JSON OF ALL POSTS
+// JSON OF ALL POSTS
 var PostsJson = [{
   "_id": "d6d7a567-3092-4aed-b8ba-fe54967e1b43",
   "content": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
@@ -164,20 +164,20 @@ var PostsJson = [{
   "createdAt": "8/3/2015"
 }];
 var Forum = React.createClass({
-  getInitialState: function() {
+  getInitialState: function () {
     return {
       posts: this.props.posts,
-      route:'forum',
-    }
+      route: "forum"
+    };
   },
 
-  handleNewPost: function(post) {
+  handleNewPost: function (post) {
     this.setState({
       posts: this.state.posts.concat(post)
     });
   },
 
-  render: function() {
+  render: function () {
 
     return (
       <div>
@@ -190,5 +190,5 @@ var Forum = React.createClass({
 
 
 ReactDOM.render(
-  <Forum posts={PostsJson} />, document.getElementById('PostsId')
+  <Forum posts={PostsJson} />, document.getElementById("PostsId")
 );

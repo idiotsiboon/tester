@@ -2,38 +2,37 @@ var App = React.createClass({
 
   getInitialState: function () {
 
-  return{
-      route:'NotFound',
+    return {
+      route: "NotFound"
     };
 
   },
 
-  setRoute(r){
-    this.setState({route:r});
+  setRoute(r) {
+    this.setState({ route: r });
   },
 
-  render(){
+  render() {
     const route = this.state.route;
 
     switch (route) {
 
-      case 'login':
-        return(<Login/>);
+      case "login":
+        return (<Login />);
         break;
 
-      case 'forum':
-          return(<Forum/>);
-          break;
+      case "forum":
+        return (<Forum />);
+        break;
 
 
       default:
-        return(<NotFound/>);
+        return (<NotFound />);
 
 
     }
 
-
-},
+  }
 
 
 });
@@ -51,7 +50,7 @@ var Post = React.createClass({
     );
   },
 
-  renderUsername: function() {
+  renderUsername: function () {
 
     return (
       <div className="col-2">
@@ -60,7 +59,7 @@ var Post = React.createClass({
     );
   },
 
-  renderContent: function() {
+  renderContent: function () {
 
     return (
       <div className="card-body" data-id={this.props.id}>
@@ -69,7 +68,7 @@ var Post = React.createClass({
     );
   },
 
-  render: function() {
+  render: function () {
 
     return (
       <span>
@@ -85,26 +84,26 @@ var Post = React.createClass({
   }
 });
 
-/*START PostS*/
+/* START PostS*/
 var Posts = React.createClass({
 
 
-  render: function() {
+  render: function () {
 
 
-    var x= this.props.posts.sort(function(a,b){
-    var c = new Date(a.createdAt);
-    var d = new Date(b.createdAt);
-    return d-c;
+    var x = this.props.posts.sort(function (a, b) {
+      var c = new Date(a.createdAt);
+      var d = new Date(b.createdAt);
+      return d - c;
     });
 
-    const renderedPosts = x.map(function(post) {
+    const renderedPosts = x.map(function (post) {
       return (
-        <Post content={post.content} key={post._id} id={post._id} username={post.username}/>
+        <Post content={post.content} key={post._id} id={post._id} username={post.username} />
       );
     });
 
-    return  (
+    return (
       <div className="card">
         {renderedPosts}
       </div>
@@ -112,32 +111,32 @@ var Posts = React.createClass({
   }
 });
 
-/*START NewPost*/
+/* START NewPost*/
 
 var NewPost = React.createClass({
-//SET INITIAL STATE
-  getInitialState: function() {
+// SET INITIAL STATE
+  getInitialState: function () {
     return {
-      content : "write here"
-    }
+      content: "write here"
+    };
   },
-//WHEN value OF Textarea CHANGES
-  handleChange: function(e) {
+// WHEN value OF Textarea CHANGES
+  handleChange: function (e) {
     this.setState({
       content: e.target.value
     });
   },
 
-  //FORM submit
-  handleSubmit: function(e) {
+  // FORM submit
+  handleSubmit: function (e) {
     e.preventDefault();
 
-    //JSON OF Post
+    // JSON OF Post
     var post = {
       "_id": Math.random(),
       "content": this.state.content,
       "username": "Maggie",
-      "createdAt":new Date(),
+      "createdAt": new Date()
     };
     console.log(post);
 
@@ -148,7 +147,7 @@ var NewPost = React.createClass({
     });
   },
 
-  render: function() {
+  render: function () {
 
     return (
       <form onSubmit={this.handleSubmit}>
@@ -162,11 +161,11 @@ var NewPost = React.createClass({
     );
   }
 });
-/*END NewPost*/
+/* END NewPost*/
 
-/*END Post*/
+/* END Post*/
 
-//JSON OF ALL POSTS
+// JSON OF ALL POSTS
 var PostsJson = [{
   "_id": "d6d7a567-3092-4aed-b8ba-fe54967e1b43",
   "content": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
@@ -204,20 +203,20 @@ var PostsJson = [{
   "createdAt": "8/3/2015"
 }];
 var Forum = React.createClass({
-  getInitialState: function() {
+  getInitialState: function () {
     return {
       posts: this.props.posts,
-      route:'forum',
-    }
+      route: "forum"
+    };
   },
 
-  handleNewPost: function(post) {
+  handleNewPost: function (post) {
     this.setState({
       posts: this.state.posts.concat(post)
     });
   },
 
-  render: function() {
+  render: function () {
 
     return (
       <div>
@@ -234,60 +233,60 @@ ReactDOM.render(
 );
 */
 
-var Nav= React.createClass({
+var Nav = React.createClass({
 
-//handleSignout:function(){};
+// handleSignout:function(){};
 
-renderBrand: function(){
-  return(
+  renderBrand: function () {
+    return (
       <div>
-        <a href="#" class="btn btn-link btn-lg">
-            <i class="icon icon-people"></i></a>
-        <a href="#" class="navbar-brand">Tester</a>
+        <a href="#" className="btn btn-link btn-lg">
+            <i className="icon icon-people"></i></a>
+        <a href="#" className="navbar-brand">Tester</a>
       </div>
   );
-},
+  },
 
-renderAvatar: function () {
-  <figure class="avatar avatar-xl">
+  renderAvatar: function () {
+    <figure className="avatar avatar-xl">
           <img src="img/avatar-2.png" />
-  </figure>
-},
+  </figure>;
+  },
 
-renderSignout: function () {
-  return(
-     <a href="#" class="btn btn-link">signout</a>
+  renderSignout: function () {
+    return (
+     <a href="#" className="btn btn-link">signout</a>
   );
-},
+  },
 
-demof:function (e) {
-  console.log(e);
-},
+  demof: function (e) {
+    console.log(e);
+  },
 
-renderLinks:function () {
-  return(
+  renderLinks: function () {
+    return (
     <div>
-    <a href="javascript:{this.demof}" class="btn btn-link">Login</a>
-    <a href="#" class="btn btn-link">Home</a>
+    <a href="javascript:{this.demof}" className="btn btn-link">Login</a>
+    <a href="#" className="btn btn-link">Home</a>
     </div>
   );
-},
+  },
 
 
-render(){
-  return(
+  render() {
+    return (
     <div>
-    <section class="navbar-section">
+    <section className="navbar-section">
     {this.renderBrand()}
     </section>
-    <section class="navbar-section">
+    <section className="navbar-section">
     {this.renderLinks()}
     {this.renderAvatar()}
     {this.renderSignout()}
     </section>
-    <div>
+    </div>
   );
-},
+  }
 
 });
 
@@ -296,14 +295,14 @@ var NotFound = React.createClass({
 
   getInitialState: function () {
 
-  return{
-      route:'NotFound',
+    return {
+      route: "NotFound"
     };
 
   },
 
-  render(){
-    return(<div>Not Found</div>);
-  },
+  render() {
+    return (<div>Not Found</div>);
+  }
 
 });

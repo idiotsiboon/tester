@@ -1,45 +1,45 @@
-var Nav= React.createClass({
+var Nav = React.createClass({
 
-handleSignout:function(){},
+  handleSignout: function () {},
 
-renderBrand: function(){
-  return(
+  renderBrand: function () {
+    return (
       <span>
         <a href="#" className="btn btn-link btn-lg">
             <i className="icon icon-people"></i></a>
         <a href="#" className="navbar-brand">Tester</a>
       </span>
   );
-},
+  },
 
-renderAvatar: function () {
-  <figure className="avatar avatar-xl">
+  renderAvatar: function () {
+    <figure className="avatar avatar-xl">
           <img src="../img/avatar-2.png" />
-  </figure>
-},
+  </figure>;
+  },
 
-renderSignout: function () {
-  return(
+  renderSignout: function () {
+    return (
      <a href="#" className="btn btn-link">signout</a>
   );
-},
+  },
 
-demof:function (e) {
-  console.log(e);
-},
+  demof: function (e) {
+    console.log(e);
+  },
 
-renderLinks:function () {
-  return(
+  renderLinks: function () {
+    return (
     <span>
     <a href="javascript:{this.demof}" className="btn btn-link">Login</a>
     <a href="#" className="btn btn-link">Home</a>
     </span>
   );
-},
+  },
 
 
-render(){
-  return(
+  render() {
+    return (
     <span>
     {this.renderBrand()}
     <section className="navbar-section">
@@ -49,10 +49,10 @@ render(){
     </section>
     </span>
   );
-}
+  }
 
 });
 
 ReactDOM.render(
-  <Nav />, document.getElementById('NavId')
+  <Nav />, document.getElementById("NavId")
 );
