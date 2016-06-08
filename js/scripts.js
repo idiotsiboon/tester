@@ -141,11 +141,3 @@ var PostsJson = [
   }
 ];
 
-
-ReactDOM.render(
-  <Posts posts={PostsJson} />, document.getElementById("PostsId")
-);
-
-ReactDOM.render(
-  <NewPost />, document.getElementById("NewPostId")
-);

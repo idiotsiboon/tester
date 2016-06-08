@@ -15,7 +15,3 @@ var NotFound = React.createClass({
 
 });
 
-
-ReactDOM.render(
-  <App />, document.getElementById("PostsId")
-);
