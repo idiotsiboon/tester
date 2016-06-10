@@ -1,22 +1,24 @@
 window.LoginScreen = React.createClass({
-  renderUsernameFeild:function () {
+
+  handleLogin: function () {
+    this.props.setRoute("homeScreen");
+  },
+  renderUsernameFeild: function () {
+    console.log("hi");
+  },
+
+  renderPasswordFeild: function () {
 
   },
 
-  renderPasswordFeild:function () {
-
-  },
-
-  handleLogin:function(){
-    this.props.route('homeScreen')
-  },
-
-  render(){
-    return(
+  render() {
+    return (
       <h1>
-      <a className="btn btn-link" onClick={this.handleLogin}>Login</a>
+        <a className="btn btn-link" onClick={this.handleLogin}>Login</a>
       </h1>
-    );
+          );
   }
 
 });
+
+//  module.exports = LoginScreen;

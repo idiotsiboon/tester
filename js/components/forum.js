@@ -1,18 +1,15 @@
 var Post = React.createClass({
-
   renderAvatar: function () {
-
     return (
       <div className="col-1">
         <figure className="avatar avatar-md">
-          <img src="img/avatar-2.png" />
+          <img src="img/avatar-2.png" role="presentation" />
         </figure>
       </div>
     );
   },
 
   renderUsername: function () {
-
     return (
       <div className="col-2">
         <h4 className="card-title">{this.props.username}</h4>
@@ -21,7 +18,6 @@ var Post = React.createClass({
   },
 
   renderContent: function () {
-
     return (
       <div className="card-body" data-id={this.props.id}>
         {this.props.content}
@@ -30,7 +26,6 @@ var Post = React.createClass({
   },
 
   render: function () {
-
     return (
       <span>
         <div className="card-header">
@@ -47,22 +42,22 @@ var Post = React.createClass({
 
 /* START PostS*/
 var PostsList = React.createClass({
-
-
   render: function () {
-
-
-    var x = this.props.posts.sort(function (a, b) {
-      var c = new Date(a.createdAt);
-      var d = new Date(b.createdAt);
-      return d - c;
-    });
-
-    const renderedPosts = x.map(function (post) {
-      return (
-        <Post content={post.content} key={post._id} id={post._id} username={post.username} />
+    var x = this.props.posts.sort(
+        function (a,b) {
+          var c = new Date(a.createdAt);
+          var d = new Date(b.createdAt);
+          return d - c;
+        }
       );
-    });
+
+    const renderedPosts = x.map(
+      function (post) {
+        return (
+          <Post content={post.content} key={post._id} id={post._id} username={post.username} />
+        );
+      }
+  );
 
     return (
       <div className="card">
@@ -90,15 +85,16 @@ var CreatePost = React.createClass({
 
   // FORM submit
   handleSubmit: function (e) {
+    var post = {
+      _id: Math.random(),
+      content: this.state.content,
+      username: "Maggie",
+      createdAt: new Date()
+    };
+
     e.preventDefault();
 
     // JSON OF Post
-    var post = {
-      "_id": Math.random(),
-      "content": this.state.content,
-      "username": "Maggie",
-      "createdAt": new Date()
-    };
     console.log(post);
 
     this.props.onNewPost(post);
@@ -109,14 +105,19 @@ var CreatePost = React.createClass({
   },
 
   render: function () {
-
     return (
       <form onSubmit={this.handleSubmit}>
-          <div className="form-group">
-              <textarea className="form-input" value={this.state.content} onChange={this.handleChange} placeholder="Textarea" rows="3"></textarea>
-          </div>
-          <div className="form-group">
-            <button type="submit" className="btn btn-primary">Create</button>
+        <div className="form-group">
+          <textarea
+            className="form-input"
+            value={this.state.content}
+            onChange={this.handleChange}
+            rows="3"
+          >
+          </textarea>
+        </div>
+        <div className="form-group">
+          <button type="submit" className="btn btn-primary">Create</button>
         </div>
       </form>
     );
@@ -143,16 +144,15 @@ window.Forum = React.createClass({
   },
 
   render: function () {
-
     return (
-          <div className="col-8">
-            <CreatePost onNewPost={this.handleNewPost} />
-            <PostsList posts={this.state.posts} />
-          </div>
+      <div className="col-8">
+        <CreatePost onNewPost={this.handleNewPost} />
+        <PostsList posts={this.state.posts} />
+      </div>
       );
   }
 
 });
 
 
-//ReactDOM.render(<Forum posts={PostsJson}/>, document.getElementById('forum-container'));
+//  ReactDOM.render(<Forum posts={PostsJson}/>, document.getElementById('forum-container'));

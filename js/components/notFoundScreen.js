@@ -1,12 +1,8 @@
-
 window.NotFoundScreen = React.createClass({
-
   getInitialState: function () {
-
     return {
       route: "NotFound"
     };
-
   },
 
   render() {
@@ -14,3 +10,5 @@ window.NotFoundScreen = React.createClass({
   }
 
 });
+
+//  module.exports = NotFoundScreen;
