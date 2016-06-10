@@ -73,7 +73,8 @@ var CreatePost = React.createClass({
 // SET INITIAL STATE
   getInitialState: function () {
     return {
-      content: "write here"
+      content: "",
+      placeholder: "Start Here"
     };
   },
 // WHEN value OF Textarea CHANGES
@@ -111,9 +112,11 @@ var CreatePost = React.createClass({
           <textarea
             className="form-input"
             value={this.state.content}
+            placeholder={this.state.placeholder}
             onChange={this.handleChange}
             rows="3"
           >
+          </textarea>
         </div>
         <div className="form-group">
           <button type="submit" className="btn btn-primary">Create</button>
