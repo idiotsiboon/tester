@@ -1,10 +1,10 @@
-/* global LoginScreen, HomeScreen, NotFoundScreen */
+/* global LoginScreen, HomeScreen, NotFoundScreen  ,RegisterScreen*/
 
 
 window.App = React.createClass({
   getInitialState: function () {
     return {
-      route: "homeScreen"
+      route: "registerScreen"
     };
   },
 
@@ -22,6 +22,8 @@ window.App = React.createClass({
         return (<LoginScreen setRoute={this.setRoute} />);
       case "homeScreen":
         return (<HomeScreen setRoute={this.setRoute} />);
+      case "registerScreen":
+        return (<RegisterScreen setRoute={this.setRoute} />);
       default:
         return (<NotFoundScreen setRoute={this.setRoute} />);
 

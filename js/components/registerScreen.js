@@ -5,10 +5,10 @@ abot
 handleregister
 */
 
-var Register = React.createClass({
+window.RegisterScreen = React.createClass({
 
   handleRegister: function () {
-
+    this.props.setRoute("homeScreen");
   },
   renderUsernameFeild: function () {
 
@@ -21,7 +21,7 @@ var Register = React.createClass({
   render() {
     return (
       <h1>
-        Reg
+        <a className="btn btn-link" onClick={this.handleRegister}>Register</a>
       </h1>
     );
   }
