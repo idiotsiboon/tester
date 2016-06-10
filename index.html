@@ -20,43 +20,43 @@
 
 <body>
 
-  <!--START  nav -->
-  <div id="nav-container"></div>
+  <!--START  nav >
+  <div id="nav-container"></div-->
   <!--END  nav -->
 
-  <!--START  create post and list of posts -->
+  <!--START  create post and list of posts>
 <div class="grid-center">
 
   <div class="col-8" >
 
-  <!--START  Create post form -->
-    <div class="col-8" id="NewPostId"></div>
-    <!-- END Create post form -->
-    <div className="col-8" id="PostsId"></div>
+    <div className="col-8" id="forum-container"></div>
 
-    <!--START List of posts -->
 
-    <!-- END - List of posts  -->
-
-  </div>
+  </div-->
   <!-- END col-6 -->
 
-</div>
+<!-- /div-->
 <!-- END grid-center -->
 
 <!--END create post and list of posts -->
 
-  <script src="build/react.js"></script>
-  <script src="build/react-dom.js"></script>
-  <script src="js_lib/browser.min.js"></script>
+<div id="root"></div>
 
 
-<script type="text/babel" src="js/nav.js" ></script>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="js_lib/browser.min.js"></script>
+
+<script type="text/babel" src="js/components/nav.js" ></script>
+<script type="text/babel" src="js/components/notFoundScreen.js" ></script>
+<script type="text/babel" src="js/components/forum.js" ></script>
+<script type="text/babel" src="js/components/homeScreen.js" ></script>
+<script type="text/babel" src="js/components/loginScreen.js" ></script>
+<script type="text/babel" src="js/components/registerScreen.js" ></script>
+<script type="text/babel" src="js/components/app.js" ></script>
 
 <script type="text/babel">
-  
-ReactDOM.render(<Nav />, document.getElementById('nav-container'));
-
+ReactDOM.render(<App/>, document.getElementById('root'));
 </script>
 
 </body>
