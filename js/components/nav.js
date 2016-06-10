@@ -1,7 +1,4 @@
 window.Nav = React.createClass({
-
-  handleSignout: function () {},
-
   renderBrand: function () {
     return (
       <span>
@@ -20,20 +17,32 @@ renderAvatar: function () {
   );
 },
 
-  renderSignout: function () {
+handleSignout: function (e) {
+this.props.route('login')
+console.log(e);
+},
+
+renderSignout: function () {
+
     return (
-     <a href="#" className="btn btn-link">signout</a>
+     <a onClick={this.handleSignout} className="btn btn-link">Signout</a>
   );
   },
 
-  demof: function (e) {
+renderLogin: function () {
+      return (
+      <a  onClick={this.handleLogin} className="btn btn-link">Login</a>
+    );
+    },
+
+handleLogin: function (e) {
     console.log(e);
   },
+
 
   renderLinks: function () {
     return (
     <span>
-    <a href="javascript:{this.demof}" className="btn btn-link">Login</a>
     <a href="#" className="btn btn-link">Home</a>
     </span>
   );

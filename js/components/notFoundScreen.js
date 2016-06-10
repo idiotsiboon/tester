@@ -1,5 +1,5 @@
 
-window.NotFound = React.createClass({
+window.NotFoundScreen = React.createClass({
 
   getInitialState: function () {
 

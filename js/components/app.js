@@ -3,7 +3,7 @@ window.App = React.createClass({
   getInitialState: function () {
 
     return {
-      route: "NotFound"
+      route: "homeScreen"
     };
 
   },
@@ -12,23 +12,22 @@ window.App = React.createClass({
     this.setState({ route: r });
   },
 
+
   render() {
     const route = this.state.route;
 
     switch (route) {
 
       case "login":
-        return (<Login />);
+        return (<LoginScreen  route={this.setRoute} />);
         break;
 
-      case "forum":
-        return (<Forum />);
+      case "homeScreen":
+        return (<HomeScreen route={this.setRoute}/>);
         break;
-
 
       default:
-        return (<NotFound />);
-
+        return (<NotFoundScreen route={this.setRoute}/>);
 
     }
   }
