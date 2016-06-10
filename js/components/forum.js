@@ -114,7 +114,6 @@ var CreatePost = React.createClass({
             onChange={this.handleChange}
             rows="3"
           >
-          </textarea>
         </div>
         <div className="form-group">
           <button type="submit" className="btn btn-primary">Create</button>

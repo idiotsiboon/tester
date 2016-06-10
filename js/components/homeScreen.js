@@ -60,8 +60,8 @@ window.HomeScreen = React.createClass({
   render() {
     return (
       <div>
-  {this.renderNav()}
-  {this.renderForum()}
+        {this.renderNav()}
+        {this.renderForum()}
       </div>
     );
   }
