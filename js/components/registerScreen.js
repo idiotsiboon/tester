@@ -6,21 +6,23 @@ handleregister
 */
 
 var Register = React.createClass({
-  renderUsernameFeild:function () {
+
+  handleRegister: function () {
+
+  },
+  renderUsernameFeild: function () {
 
   },
 
-  renderPasswordFeild:function () {
+  renderPasswordFeild: function () {
 
   },
 
-  handleRegister:function(){
-
-  },
-
-  render(){
-    return(
-
+  render() {
+    return (
+      <h1>
+        Reg
+      </h1>
     );
   }
 
