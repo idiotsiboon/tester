@@ -44,7 +44,7 @@ var Post = React.createClass({
 var PostsList = React.createClass({
   render: function () {
     var x = this.props.posts.sort(
-        function (a,b) {
+        function (a, b) {
           var c = new Date(a.createdAt);
           var d = new Date(b.createdAt);
           return d - c;
