@@ -1,4 +1,4 @@
-
+/* global Nav,Forum */
 var PostsJson = [{
   _id: "d6d7a567-3092-4aed-b8ba-fe54967e1b43",
   content: "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
@@ -36,10 +36,6 @@ var PostsJson = [{
   createdAt: "8/3/2015"
 }];
 
-/*
-var Nav = require("./nav.js");
-var Forum = require("./forum.js");
-*/
 window.HomeScreen = React.createClass({
 //  nav
   renderNav: function () {
