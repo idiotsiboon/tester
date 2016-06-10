@@ -43,7 +43,7 @@ window.Nav = React.createClass({
       <span>
         <a href="#" className="btn btn-link">Home</a>
       </span>
-  );
+    );
   },
 
 
@@ -57,7 +57,7 @@ window.Nav = React.createClass({
           {this.renderSignout()}
         </section>
       </header>
-  );
+    );
   }
 
 });

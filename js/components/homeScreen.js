@@ -43,7 +43,7 @@ var Forum = require("./forum.js");
 window.HomeScreen = React.createClass({
 //  nav
   renderNav: function () {
-    return (<Nav setRoute={this.props.setRoute} />);
+    return <Nav setRoute={this.props.setRoute} />;
   },
 
 //  forum
@@ -53,7 +53,8 @@ window.HomeScreen = React.createClass({
         <div className="col-8" >
           <Forum posts={PostsJson} />
         </div>
-      </div>);
+      </div>
+    );
   },
 
   render() {
@@ -61,7 +62,8 @@ window.HomeScreen = React.createClass({
       <div>
   {this.renderNav()}
   {this.renderForum()}
-      </div>);
+      </div>
+    );
   }
 
 });

@@ -6,7 +6,7 @@ window.NotFoundScreen = React.createClass({
   },
 
   render() {
-    return (<div>Not Found</div>);
+    return <div>Not Found</div>;
   }
 
 });

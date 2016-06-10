@@ -16,7 +16,7 @@ window.LoginScreen = React.createClass({
       <h1>
         <a className="btn btn-link" onClick={this.handleLogin}>Login</a>
       </h1>
-          );
+    );
   }
 
 });

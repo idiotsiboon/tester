@@ -149,7 +149,7 @@ window.Forum = React.createClass({
         <CreatePost onNewPost={this.handleNewPost} />
         <PostsList posts={this.state.posts} />
       </div>
-      );
+    );
   }
 
 });
